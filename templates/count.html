@@ -1,0 +1,14 @@
+<h1>Count Results</h1>
+
+<h2>Your text:</h2>
+	<p>{{fulltext}}</p>
+	<br>
+	<a href="{% url 'home' %}">Go Back</a>
+<h2>Word Count:</h2>
+	<p>You have here {{wordsAmmount}} words</p>
+	<p>Distributed as follows</p>
+	{% for word, ammount in wordsDict %}
+	{{word}} ----- {{ammount}}
+	<br>
+	{% endfor %}
+	
